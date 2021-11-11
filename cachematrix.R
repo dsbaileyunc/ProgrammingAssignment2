@@ -2,6 +2,7 @@
 ## recall a calculated inverse matrix.  This storage reduces processing time
 ## for routinely used matrix calculations
 
+
 # Function stores a specified matrix and calculated inverse in Parent Environment
 # storage allows for easy recall and eliminate constant processing with solve()
 makeCacheMatrix <- function(x = matrix()) {
@@ -41,10 +42,5 @@ cacheSolve <- function(x, ...) {
   x$setInverse(m)
   m
 }
-
-message("Test Functions")
-m1<-matrix(c(0.5, -0.25, -1.0, .75), nrow =2, ncol=2)
-m1
-Test_Matrix1<-makeCacheMatrix(m1)
 
 
